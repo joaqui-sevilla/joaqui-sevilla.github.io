@@ -79,6 +79,45 @@ p { margin-bottom: 14px; }
 
 .publications li em { font-size: 0.9em; }
 
+.abstract-toggle { margin-top: 5px; }
+
+.abstract-toggle summary {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 8px;
+}
+.abstract-toggle summary::-webkit-details-marker { display: none; }
+.abstract-toggle summary:hover { color: var(--text); border-color: var(--underline); }
+
+.abstract-toggle summary::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-left: 4px solid currentColor;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: transform 0.15s ease;
+}
+.abstract-toggle[open] summary::after { transform: rotate(90deg); }
+
+.abstract {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: justify;
+}
+
 .pub-title {
   font-weight: 600;
   color: var(--text);
