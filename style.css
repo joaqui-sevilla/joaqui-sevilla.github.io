@@ -85,37 +85,24 @@ p { margin-bottom: 14px; }
   list-style: none;
   display: inline-block;
   cursor: pointer;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 1px 8px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--underline);
+  text-underline-offset: 2px;
 }
 .abstract-toggle summary::-webkit-details-marker { display: none; }
-.abstract-toggle summary:hover { color: var(--text); border-color: var(--underline); }
-
-.abstract-toggle summary::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 6px;
-  vertical-align: middle;
-  border-left: 4px solid currentColor;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  transition: transform 0.15s ease;
-}
-.abstract-toggle[open] summary::after { transform: rotate(90deg); }
+.abstract-toggle summary:hover { color: var(--text); }
 
 .abstract {
   margin-top: 8px;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   line-height: 1.6;
   color: var(--muted);
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .pub-title {
